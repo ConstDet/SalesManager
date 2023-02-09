@@ -15,7 +15,7 @@ public class SalesManager {
     }
 
     public long min() {
-        long min = Integer.MAX_VALUE;
+        long min = Long.MAX_VALUE;
         for (long sale : sales) {
             if (sale < min) {
                 min = sale;
