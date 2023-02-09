@@ -14,9 +14,9 @@ public class SalesManager {
         return max;
     }
 
-    public int min() {
-        int min = Integer.MAX_VALUE;
-        for (int sale : sales) {
+    public long min() {
+        long min = Integer.MAX_VALUE;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -26,8 +26,9 @@ public class SalesManager {
 
     public double cutAverage() {
         double sumArray = 0;
-        int count = 0, min = this.min(), max = this.max();
-        for (int sale : sales) {
+        int count = 0;
+        long min = this.min(), max = this.max();
+        for (long sale : sales) {
             if (sale != min && sale != max) {
                 sumArray += sale;
                 count++;
